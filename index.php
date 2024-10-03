@@ -55,57 +55,62 @@ $hotels = [
 <body>
 
     <main>
-        <ul>
-            <?php foreach ($hotels as $hotel) {?>
-            <li>
-                <h2>
-                    Struttura: <?= $hotel["name"]; ?>
-                </h2>
-                <h2>
-                    Descrizione:<?= $hotel["description"]; ?>
-                </h2>
-                <h2>
-                    Parcheggio: <?= $hotel["parking"] ? "Si!" : "No!"; 
+        <section class="container mb-5">
+            <ul>
+                <?php foreach ($hotels as $hotel) {?>
+                <li>
+                    <h2>
+                        Struttura: <?= $hotel["name"]; ?>
+                    </h2>
+                    <h2>
+                        Descrizione:<?= $hotel["description"]; ?>
+                    </h2>
+                    <h2>
+                        Parcheggio: <?= $hotel["parking"] ? "Si!" : "No!"; 
                     ?>
-                </h2>
-                <h2>
-                    Valutazione: <?= $hotel["vote"] . "/5"; ?>
-                </h2>
-                <h2>
-                    Distanza dal centro: <?= $hotel["distance_to_center"]."km"; ?>
-                </h2>
-            </li>
-            <?php }?>
+                    </h2>
+                    <h2>
+                        Valutazione: <?= $hotel["vote"] . "/5"; ?>
+                    </h2>
+                    <h2>
+                        Distanza dal centro: <?= $hotel["distance_to_center"]."km"; ?>
+                    </h2>
+                </li>
+                <?php }?>
 
 
-        </ul>
+            </ul>
+        </section>
 
-        <table class="table">
+        <section class="container mt-5">
+            <table class="table">
 
-            <thead>
-                <tr>
-                    <th scope="col">Struttura:</th>
-                    <th scope="col">Descrizione:</th>
-                    <th scope="col">Parcheggio:</th>
-                    <th scope="col">Valutazione:</th>
-                    <th scope="col">Distanza dal centro:</th>
-                </tr>
-            </thead>
-            <?php foreach ($hotels as $hotel) {?>
-            <tbody>
-                <tr>
-                    <th scope="row"> <?= $hotel["name"]; ?></th>
-                    <td><?=$hotel["description"]; ?></td>
-                    <td><?=$hotel["parking"] ? "Si!" : "No!"; ?></td>
-                    <td><?=$hotel["vote"] . "/5"; ?></td>
-                    <td><?=$hotel["distance_to_center"] . "km"; ?></td>
+                <thead>
+                    <tr>
+                        <th scope="col">Struttura:</th>
+                        <th scope="col">Descrizione:</th>
+                        <th scope="col">Parcheggio:</th>
+                        <th scope="col">Valutazione:</th>
+                        <th scope="col">Distanza dal centro:</th>
+                    </tr>
+                </thead>
+                <?php foreach ($hotels as $hotel) {?>
+                <tbody>
+                    <tr>
+                        <th scope="row"> <?= $hotel["name"]; ?></th>
+                        <td><?=$hotel["description"]; ?></td>
+                        <td><?=$hotel["parking"] ? "Si!" : "No!"; ?></td>
+                        <td><?=$hotel["vote"] . "/5"; ?></td>
+                        <td><?=$hotel["distance_to_center"] . "km"; ?></td>
 
-                </tr>
+                    </tr>
 
 
-            </tbody>
-            <?php }?>
-        </table>
+                </tbody>
+                <?php }?>
+            </table>
+        </section>
+
     </main>
 </body>
 
