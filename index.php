@@ -38,6 +38,8 @@ $hotels = [
 ];
 
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,19 +57,20 @@ $hotels = [
             <?php foreach ($hotels as $hotel) {?>
             <li>
                 <h2>
-                    <?= $hotel["name"]; ?>
+                    Struttura: <?= $hotel["name"]; ?>
                 </h2>
                 <h2>
-                    <?= $hotel["description"]; ?>
+                    Descrizione:<?= $hotel["description"]; ?>
                 </h2>
                 <h2>
-                    <?= $hotel["parking"]; ?>
+                    Parcheggio: <?= $hotel["parking"] ? "Si!" : "No!"; 
+                    ?>
                 </h2>
                 <h2>
-                    <?= $hotel["vote"]; ?>
+                    Valutazione: <?= $hotel["vote"] . "/5"; ?>
                 </h2>
                 <h2>
-                    <?= $hotel["distance_to_center"]; ?>
+                    Distanza dal centro: <?= $hotel["distance_to_center"]."km"; ?>
                 </h2>
             </li>
             <?php }?>
