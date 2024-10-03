@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Hotel</title>
-</head>
 <?php 
 $hotels = [
     [
@@ -46,9 +38,43 @@ $hotels = [
 ];
 
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Hotel</title>
+</head>
+
 
 <body>
 
+    <main>
+        <ul>
+            <?php foreach ($hotels as $hotel) {?>
+            <li>
+                <h2>
+                    <?= $hotel["name"]; ?>
+                </h2>
+                <h2>
+                    <?= $hotel["description"]; ?>
+                </h2>
+                <h2>
+                    <?= $hotel["parking"]; ?>
+                </h2>
+                <h2>
+                    <?= $hotel["vote"]; ?>
+                </h2>
+                <h2>
+                    <?= $hotel["distance_to_center"]; ?>
+                </h2>
+            </li>
+            <?php }?>
+
+
+        </ul>
+    </main>
 </body>
 
 </html>
