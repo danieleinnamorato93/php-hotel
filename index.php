@@ -55,7 +55,7 @@ $hotels = [
 <body>
 
     <main>
-        <section class="container mb-5">
+        <!--  <section class="container mb-5">
             <ul>
                 <?php foreach ($hotels as $hotel) {?>
                 <li>
@@ -80,7 +80,8 @@ $hotels = [
 
 
             </ul>
-        </section>
+        </section>-->
+
 
         <section class="container mt-5">
             <table class="table">
